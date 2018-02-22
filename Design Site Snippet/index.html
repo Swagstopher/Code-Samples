@@ -1,0 +1,196 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>| < . > | - Design</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link href="https://fonts.googleapis.com/css?family=Fenix" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+</head>
+
+<body>
+
+	<div style="z-index: -1000; position: absolute; height:100vh; width:100vw; overflow: hidden;">
+<css-doodle>
+ :doodle {
+    @grid: 10 / 100%;
+  }
+
+  transition: .2s ease @rand(.6s);
+  will-change: transform;
+  
+  width: @rand(200%);
+  transform:
+    rotate(-45deg)
+    translateY(@rand(-50%, 50%));
+
+  border-top: 1px solid hsla(
+    calc(5 + 2 * @index()), 90%, 75%,
+    @rand(.8)
+  );
+</css-doodle>
+</div>
+
+	<div class="row middle-xs">
+		<div class="col-xs-2">
+		  <t class="nav-logo"></t> 
+		</div>
+		<div class="col-xs-offset-6 col-xs-4">
+			<div class="row">
+				<div id="about" onclick="activeAbout()" class="col-xs-4">
+					<t class="one-five nav-text">About</t>
+				</div>
+				<div id="portfolio" onclick="activePortfolio()" class="col-xs-4">
+				<t class="one-five nav-text portfolio">
+					Portfolio
+				</t>
+				</div>				
+				<div id="contact" onclick="activeContact()" class="col-xs-4">
+					<t class="one-five nav-text">
+					Contact
+				</t>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="row middle-xs content-row">
+		<div class="col-xs-1">
+			<div class="row">
+				<div class="col-xs-offset-4 col-xs-4">
+					<div class="row">
+						<div class="col-xs-12">
+							<img class="social-media" src="images/001-linkedin.svg">
+						</div>
+
+				<div class="col-xs-12"><img class="social-media" src="images/002-youtube.svg"></div>		
+				<div class="col-xs-12"><img class="social-media" src="images/003-twitter.svg"></div>
+				<div class="col-xs-12"><img class="social-media" src="images/004-facebook.svg"></div>
+				<div class="col-xs-12"><img class="social-media" src="images/005-instagram.svg"></div>
+											</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-10">
+
+			<!-- Start About Page -->
+			<div id="aboutcontent"  class="row top-xs invis">
+				<div class="col-xs-12" style="padding:1%; ">
+					<div class="row">
+						<div class="col-xs-2 start-xs">
+							<img style="border-radius:50%;" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-1/c12.18.156.156/408754_111506842303175_361451359_n.jpg?oh=d5f1b2b9f6c07d11589a9643aff51c0d&oe=5B046D0A">
+						</div>
+						<div class="col-xs-10 center-xs">
+							<div class="row">
+								<div class="col-xs-12 start-xs" style="border-bottom-color: #d8d8d8; border-bottom-style: solid; border-width: 1px;">
+									<h1>Christopher Navy</h1>
+								</div>
+								<div class="col-xs-12">
+									<div class="row">
+										<br>
+										<div class="col-xs-4">
+											<h4>Athlete</h4>
+										</div>
+										<div class="col-xs-4">
+											<h4>Front End Developer</h4>
+										</div>
+										<div class="col-xs-4">
+											<h4>Dancer</h4>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-12 start-xs">
+										<div class="row bottom-xs">
+											<div class="col-xs-2 end-xs" style="color:#acacac;">
+												Hometown
+											</div>
+									<div class="col-xs-8">
+												San Francisco, CA
+											</div>
+										</div>
+								</div>
+								<div class="col-xs-12 start-xs">
+										<div class="row bottom-xs">
+											<div class="col-xs-2 end-xs" style="color:#acacac;">
+												College
+											</div>
+									<div class="col-xs-8">
+												San Jose State University
+											</div>
+										</div>
+			<div class="row bottom-xs">
+											<div class="col-xs-2 end-xs" style="color:#acacac;">
+												Education
+											</div>
+									<div class="col-xs-8 start-xs">
+												B.S. Software Engineering
+											</div>
+										</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="col-xs-12">
+							<br>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis pellentesque fermentum. Sed elit sem, commodo eu ipsum et, posuere cursus velit. Morbi vestibulum fringilla dui, sit amet iaculis dui. Nullam volutpat nulla in condimentum dapibus. Mauris vel eros in velit viverra efficitur. Mauris est nisi, hendrerit id consectetur a, feugiat quis tellus. Nulla sed felis sapien. Integer ut varius purus. Quisque congue ante eu sapien blandit, a malesuada elit ultricies.
+
+Vivamus blandit purus sed diam tempus tincidunt. Etiam sagittis, lorem non viverra scelerisque, quam sapien posuere lacus, non venenatis urna turpis eget tortor. Nullam interdum viverra dui, in posuere eros volutpat eget. Pellentesque dapibus lobortis sollicitudin. Praesent at turpis eu augue interdum mollis a nec arcu. Pellentesque non congue dolor. Maecenas lobortis mollis urna. Quisque ut lorem libero. Mauris vitae leo elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam nunc velit, volutpat eu porta ullamcorper, feugiat in justo. Proin a velit tortor. Donec ultrices interdum purus, eget scelerisque ex congue iaculis. Aliquam et nulla vulputate, cursus justo in, pulvinar ex. Maecenas ut urna quis sem lobortis venenatis at eget est. Pellentesque rutrum ultricies nunc et vulputate.
+						</div>
+
+					</div>
+				</div>
+			</div>
+<!-- End About Page -->
+
+<!-- Start Portfolio Page -->
+
+<div id="portfoliocontent" class="row top-xs invis">
+	Portfolio Page
+	</div>
+
+<!-- End Portfolio Page -->
+
+<!-- Contact Page -->
+
+<div id="contactcontent" class="row top-xs invis">
+	Contact Page
+	</div>
+
+<!-- End Contact Page -->
+		</div>
+		<div class="col-xs-1">
+			<div class="row middle-xs center-xs">
+				<div class="col-xs-12">
+					<div class="row center-xs middle-xs">
+						<div class="circle">
+					<div onclick="activeAbout()" id="dotabout" class="nav-circle"></div>
+				</div>
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="row center-xs middle-xs">
+						<div class="circle">
+					<div onclick="activePortfolio()" id="dotportfolio" class="nav-circle"></div>
+				</div>
+					</div>
+				</div>				
+				<div class="col-xs-12">
+					<div class="row center-xs middle-xs">
+						<div class="circle">
+					<div onclick="activeContact()" id="dotcontact" class="nav-circle"></div>
+				</div>
+					</div>
+				</div>		</div>
+	</div>
+</div>
+
+  <script src="js/script.js"></script>
+  <script src="js/css-doodle.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!-- Modern Splash Page -->
+<div allowed-view></div>
+<div auth-modal></div>
+<div class="modal" id="myModal" tabindex="-1" role="dialog" style="display:block;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" id="closeModal" data-dismiss="modal"
+         aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">ATTENTION:</h4>
+      </div>
+      <div class="modal-body">
+        <h5 class="signup_header">[Removed]</h5>
+        <p class="signup_header">
+          [Removed]
+        </p>
+      </div>
+      <div class="modal-footer">
+        <a ng-href="https://www.google.com" id="No">
+        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+        </a>
+        <button type="button" class="btn btn-primary" id="Yes">Yes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- Modal -->
+<div class="modal" id="authModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+             <ul class="nav nav-tabs" role="tablist">
+               <li role="presentation" class="active">
+                 <a href="#loginModal" aria-controls="home" role="tab"
+                  data-toggle="tab" id="loginTab">Log In
+                </a>
+               </li>
+               <li role="presentation">
+                 <a href="#signupModal" aria-controls="profile" role="tab"
+                  data-toggle="tab" id="signupTab">Sign Up
+                </a>
+               </li>
+             </ul>
+            <div class="modal-body">
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="loginModal">
+                  <h3 class="signup_header">LOG IN</h3>
+                  <div ng-show="error" class="signup_error_msg">
+                    <span> {{ error.message }}</span>
+                  </div>
+                  <form ng-submit="logIn()">
+                    <div class="form-group">
+                      <input type="text" placeholder="Username" ng-model="user.username" class="signup_text_field">
+                      </input>
+                    </div>
+                    <div class="form-group">
+                      <input type="password" placeholder="Password"
+                        ng-model="user.password" class="signup_text_field">
+                      </input>
+                    </div>
+                    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                    </input>
+                    <button type="submit" class="signup_submit_button" id="loginBtn">LOG IN</button>
+                    <p class="signup_login_instead">
+                    </p>
+                    <p class="signup_login_instead" id="forgotAuth">
+                      <a href="/#/forgot">
+                      Forgot username or password?
+                      </a>
+                    </p>
+                    <div ng-show="waitlistActive">
+                      <p class="signup_login_instead">
+                        Get on our waitlist. <a href="/#/waitlists/new"> Sign Up </a>
+                      </p>
+                    </div>
+                    <p class="signup_login_instead">
+                      Have a question? Check out our <a ng-href="/#/faq" id="goFaq"> FAQ </a>
+                    </p>
+                  </form>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="signupModal">
+                  <h3 class="signup_header">SIGN UP</h3>
+                  <div ng-show="error" class="signup_error_msg">
+                    <span> {{ error.message }}</span>
+                  </div>
+                  <form ng-submit="register()">
+                      <div class="form-group">
+                        <input type="text" placeholder="Username" ng-model="user.username" class="signup_text_field">
+                        </input>
+                      </div>
+                      <div class="form-group">
+                        <input type="text" placeholder="Email" ng-model="user.email" class="signup_text_field">
+                        </input>
+                      </div>
+                      <div class="form-group">
+                        <input type="password" placeholder="Password" ng-model="user.password" class="signup_text_field">
+                        </input>
+                        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                        </input>
+
+                      </div>
+                      <p class="signup_warning">
+                        [Removed]
+                      </p>
+                      <button type="submit" class="signup_submit_button" id="signupBtn">SIGN UP</button>
+                      <p class="signup_login_instead" id="goFaq">
+                        Have a question? Check out our <a ng-href="/#/faq"> FAQ </a>
+                      </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="splash_bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <img src="/images/[Removed]" class="img-responsive center-block splash_logo" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <img src="/images/[Removed]" class="img-responsive center-block splash_gif" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="splash_enter_link" data-toggle="modal" data-target="#authModal">
+          <h2 id="push_start">PUSH START</h2>
+        </div>
+      </div>
+      <!-- Button trigger modal -->
+    </div>
+  </div>
+</div>
+<div footer-partial></div>
