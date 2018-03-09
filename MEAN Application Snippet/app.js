@@ -90,8 +90,8 @@ if (process.env.ENVIRON === 'local') {
 } else {
   //Production
   var server = https.createServer({
-    key: fs.readFileSync('www_gamergril_com.key'),
-    cert: fs.readFileSync('www_gamergril_com.crt'),
+    key: fs.readFileSync('[removed].key'),
+    cert: fs.readFileSync('[removed].crt'),
     ca: [fs.readFileSync('DigiCertCA.crt')]
   }, app).listen(8888);
 }
